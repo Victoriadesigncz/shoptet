@@ -1,5 +1,5 @@
    ShoptetStyle CSS 
-   .custom-button {
+   .custom-button-switchlink {
        display: inline-block;
        padding: 10px 20px;
        border-radius: var(--spacing-spacing-1, 4px);
@@ -13,7 +13,7 @@
    }
 
    @media screen and (max-width: 768px) {
-       .custom-button {
+       .custom-button-switchlink {
            display: flex;
            padding: 5px 10px;
            border-radius: var(--spacing-spacing-1, 2px);
@@ -25,7 +25,7 @@
        }
    }
 
-   .custom-button:hover {
+   .custom-button-switchlink:hover {
        background: var(--color-accent-accent-100, #F7E2A8);
    }
 
