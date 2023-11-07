@@ -1,3 +1,4 @@
+/* Base styles for the sections */
 .tailormade-section {
   display: flex;
   align-items: center;
@@ -18,13 +19,8 @@
   margin: 0 -15px;
 }
 
-.col-third {
-  width: 33.33333%;
-  padding: 0 15px;
-}
-
+.col-third,
 .col-two-thirds {
-  width: 66.66667%;
   padding: 0 15px;
 }
 
@@ -50,16 +46,22 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .tailormade-section .row {
+    flex-direction: column-reverse;
+  }
+
   .col-third,
   .col-two-thirds {
     width: 100%;
   }
+
   [data-aos="fade-right"],
   [data-aos="fade-left"] {
     transform: translateY(0);
   }
 }
 
+/* Background styles for sections */
 .switches-section {
   background-color: #202328; /* Dark background */
   color: #DEBC8F; /* Accent color for text */
@@ -67,34 +69,34 @@
   background-repeat: repeat; /* Tile the background image */
 }
 
-/* Since the styles for .container, .row, .col-third, .col-two-thirds, and .fade-in-image are already defined in the previous section, we don't need to repeat them. They will apply here as well. */
-
-/* Responsive adjustments for the switches section, if needed */
-@media (max-width: 768px) {
-  .switches-section .col-third,
-  .switches-section .col-two-thirds {
-    width: 100%;
-  }
-  .switches-section [data-aos="fade-right"],
-  .switches-section [data-aos="fade-left"] {
-    transform: translateY(0);
-  }
-}
-@media (max-width: 768px) {
-  .tailormade-section .row {
-    flex-direction: column;
-  }
-
-  .tailormade-section .row .col-third {
-    order: 1;
-  }
-
-  .tailormade-section .row .col-two-thirds {
-    order: 2;
-  }
+/* Image as a background with cover effect */
+.tailormade-section .col-third {
+  position: relative;
+  width: 33.33333%;
 }
 
-/* Additional global styles, if needed */
+.tailormade-section .col-third::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit; /* Inherit the background image from the parent */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: scale(1.1); /* Slightly larger scale for overlap effect */
+}
+
+.tailormade-section .col-two-thirds {
+  position: relative;
+  width: 66.66667%;
+  z-index: 2;
+}
+
+/* Global styles */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f4f4f4; /* Light grey background */
@@ -105,22 +107,5 @@ h1, h2, p {
   padding: 0;
 }
 
+/* Additional global styles */
 /* Add any additional global styles you need below */
-.tailormade-section .col-third {
-  position: relative;
-  z-index: 1;
-}
-
-.tailormade-section .col-third img {
-  width: 110%; /* Set to more than 100% to make it larger */
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.tailormade-section .col-two-thirds {
-  position: relative;
-  z-index: 2;
-}
