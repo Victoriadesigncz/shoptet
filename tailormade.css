@@ -60,20 +60,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .col-third {
-    order: -1; /* This will ensure the image is above the text on mobile */
-  }
-
-  .col-two-thirds {
-    order: 1; /* This will ensure the text comes after the image on mobile */
-  }
-}
-
 .switches-section {
   background-color: #202328; /* Dark background */
   color: #DEBC8F; /* Accent color for text */
