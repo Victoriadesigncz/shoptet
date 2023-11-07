@@ -1,4 +1,3 @@
-<script>
 // Get the modal and close button
 var modal = document.getElementById("myModal");
 var modalImage = document.getElementById("modalImage");
@@ -141,4 +140,4 @@ modalImage.addEventListener("touchmove", function(event) {
     // Reset the start position for the next swipe
     startX = endX;
     startY = endY;
-});</script>
+});
