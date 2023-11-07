@@ -96,7 +96,7 @@
 }
 @media (max-width: 768px) {
   .tailormade-section .row {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .tailormade-section .row .col-third {
