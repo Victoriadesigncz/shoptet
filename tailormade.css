@@ -51,7 +51,7 @@
 .tailormade-banner {
   padding: 100px 0;
   color: #fff;
-  background: url('your-image.jpg') no-repeat 0px -400px;
+  background: url('your-banner-image-placeholder.jpg') no-repeat center center;
   background-size: cover;
   text-align: center;
 }
@@ -81,4 +81,57 @@
   color: #fff;
   text-align: center;
   padding: 30px 0;
+}
+
+/* Responsive Images */
+.tailormade-banner img,
+.tailormade-image-section img,
+.tailormade-call-to-action img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Meetings Iframe Container */
+.meetings-iframe-container {
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0055a3;
+}
+
+/* General Responsiveness */
+@media (max-width: 768px) {
+  .tailormade-header h1,
+  .tailormade-call-to-action h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Add any other responsive adjustments here */
 }
