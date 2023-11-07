@@ -1,4 +1,111 @@
 /* Base styles for the sections */
+* Base styles for the sections */
+.tailormade-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden; /* Ensure that the oversized images don't cause scrollbars */
+  background-color: #202328; /* Dark background for the section */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-third,
+.col-two-thirds {
+  padding: 0 15px;
+  position: relative; /* Needed for z-index to work */
+}
+
+.fade-in-image {
+  max-width: 250%; /* Larger images */
+  height: auto;
+  position: absolute; /* Absolute position to allow overlap */
+  left: -25%; /* Center the images */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Below the text content */
+}
+
+.text-content {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  color: #ffffff; /* Light text for readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+  padding: 20px;
+  border-radius: 8px; /* Modern rounded corners */
+  position: relative;
+  z-index: 2; /* Above the images */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tailormade-section .row {
+    flex-direction: column-reverse;
+  }
+
+  .col-third,
+  .col-two-thirds {
+  }
+
+  .fade-in-image {
+    position: relative; /* Reset position for mobile */
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .text-content {
+    background: rgba(0, 0, 0, 0.8); /* Less transparency for readability on mobile */
+  }
+}
+
+/* Additional global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #101418; /* Darker grey background for the body */
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+  color: #ffffff; /* Ensure all text is light for readability */
+}
+.background-section {
+  position: relative;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the section */
+  opacity: 0; /* Start with an invisible image */
+  transition: opacity 0.5s ease; /* Smooth transition for the fade-in */
+}
+
+/* Initialize AOS with settings for fade-in */
+AOS.init({
+  once: true, // Animation should only happen once while scrolling down
+});
+
+/* Add any additional global styles you need below */
+
+
 .tailormade-section {
   display: flex;
   align-items: center;
@@ -99,7 +206,7 @@
 /* Global styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4; /* Light grey background */
+  background-color: #202328; /* Light grey background */
 }
 
 h1, h2, p {
