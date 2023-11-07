@@ -1,0 +1,96 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the product, you might need to adjust the max-width for your layout */
+.giulini-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling for the product description */
+.giulini-product-description {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.giulini-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.giulini-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.giulini-features {
+    list-style: none;
+}
+
+.giulini-feature {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.giulini-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .giulini-title {
+        font-size: 20px;
+    }
+
+    .giulini-description {
+        font-size: 16px;
+    }
+
+    .giulini-feature {
+        font-size: 14px;
+    }
+}
+.giulini-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.giulini-product-image,
+.giulini-dimensions-image {
+    width: 49%; /* Adjust the width as needed, ensuring both images fit side by side */
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .giulini-images {
+        flex-direction: column;
+    }
+
+    .giulini-product-image,
+    .giulini-dimensions-image {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px;
+    }
+}
