@@ -1,137 +1,95 @@
-/* Tailormade Support Landing Page Styles */
-.tailormade-header {
-  background: #333;
-  color: #fff;
-  padding-top: 30px;
-  min-height: 70px;
-  border-bottom: #0066cc 3px solid;
+.tailormade-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  color: #DEBC8F; /* Accent color for text */
 }
 
-.tailormade-header a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-}
-
-.tailormade-header ul {
-  padding: 0;
-  list-style: none;
-}
-
-.tailormade-header li {
-  float: left;
-  display: inline;
-  padding: 0 20px 0 20px;
-}
-
-.tailormade-branding {
-  float: left;
-}
-
-.tailormade-branding h1 {
-  margin: 0;
-}
-
-.tailormade-nav {
-  float: right;
-  margin-top: 10px;
-}
-
-.tailormade-nav .highlight, .tailormade-nav .current a {
-  color: #e8491d;
-  font-weight: bold;
-}
-
-.tailormade-nav a:hover {
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.tailormade-banner {
-  padding: 100px 0;
-  color: #fff;
-  background: url('your-banner-image-placeholder.jpg') no-repeat center center;
-  background-size: cover;
-  text-align: center;
-}
-
-.tailormade-banner h1 {
-  font-size: 55px;
-  margin-bottom: 10px;
-}
-
-.tailormade-banner p {
-  font-size: 20px;
-}
-
-.tailormade-call-to-action {
-  color: #333;
-  padding: 20px 0;
-  background: #e8491d;
-  text-align: center;
-}
-
-.tailormade-call-to-action h1 {
-  margin-bottom: 10px;
-}
-
-.tailormade-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 30px 0;
-}
-
-/* Responsive Images */
-.tailormade-banner img,
-.tailormade-image-section img,
-.tailormade-call-to-action img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Container */
 .container {
-  width: 80%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-third {
+  width: 33.33333%;
   padding: 0 15px;
 }
 
-/* Meetings Iframe Container */
-.meetings-iframe-container {
-  width: 100%;
-  min-height: 500px;
-  overflow: hidden;
+.col-two-thirds {
+  width: 66.66667%;
+  padding: 0 15px;
 }
 
-/* Button Styling */
-.btn {
-  background-color: #0066cc;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+.fade-in-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.btn:hover {
-  background-color: #0055a3;
+.text-content {
+  max-width: 540px;
+  margin-left: auto;
+  padding: 0 15px;
 }
 
-/* General Responsiveness */
+/* AOS animation override if needed */
+[data-aos="fade-right"],
+[data-aos="fade-left"] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .tailormade-header h1,
-  .tailormade-call-to-action h1 {
-    font-size: 24px;
+  .col-third,
+  .col-two-thirds {
+    width: 100%;
   }
-
-  .container {
-    padding: 0 10px;
+  [data-aos="fade-right"],
+  [data-aos="fade-left"] {
+    transform: translateY(0);
   }
-
-  /* Add any other responsive adjustments here */
 }
+
+.switches-section {
+  background-color: #202328; /* Dark background */
+  color: #DEBC8F; /* Accent color for text */
+  background-image: url('https://shop.victoriadesign.cz/user/documents/upload/Tailormade Page/BACKGROUND.png');
+  background-repeat: repeat; /* Tile the background image */
+}
+
+/* Since the styles for .container, .row, .col-third, .col-two-thirds, and .fade-in-image are already defined in the previous section, we don't need to repeat them. They will apply here as well. */
+
+/* Responsive adjustments for the switches section, if needed */
+@media (max-width: 768px) {
+  .switches-section .col-third,
+  .switches-section .col-two-thirds {
+    width: 100%;
+  }
+  .switches-section [data-aos="fade-right"],
+  .switches-section [data-aos="fade-left"] {
+    transform: translateY(0);
+  }
+}
+
+/* Additional global styles, if needed */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Light grey background */
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add any additional global styles you need below */
