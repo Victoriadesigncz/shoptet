@@ -94,6 +94,19 @@
     transform: translateY(0);
   }
 }
+@media (max-width: 768px) {
+  .tailormade-section .row {
+    flex-direction: column-reverse;
+  }
+
+  .tailormade-section .row .col-third {
+    order: 1;
+  }
+
+  .tailormade-section .row .col-two-thirds {
+    order: 2;
+  }
+}
 
 /* Additional global styles, if needed */
 body {
