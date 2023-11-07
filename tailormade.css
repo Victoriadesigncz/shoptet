@@ -106,3 +106,21 @@ h1, h2, p {
 }
 
 /* Add any additional global styles you need below */
+.tailormade-section .col-third {
+  position: relative;
+  z-index: 1;
+}
+
+.tailormade-section .col-third img {
+  width: 110%; /* Set to more than 100% to make it larger */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.tailormade-section .col-two-thirds {
+  position: relative;
+  z-index: 2;
+}
