@@ -62,13 +62,15 @@
 
 @media (max-width: 768px) {
   .row {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
-  .col-third,
-  .col-two-thirds {
-    width: 100%;
+  .col-third {
     order: -1; /* This will ensure the image is above the text on mobile */
+  }
+
+  .col-two-thirds {
+    order: 1; /* This will ensure the text comes after the image on mobile */
   }
 }
 
