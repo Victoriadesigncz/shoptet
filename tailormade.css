@@ -60,6 +60,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .col-third,
+  .col-two-thirds {
+    width: 100%;
+    order: -1; /* This will ensure the image is above the text on mobile */
+  }
+}
+
 .switches-section {
   background-color: #202328; /* Dark background */
   color: #DEBC8F; /* Accent color for text */
